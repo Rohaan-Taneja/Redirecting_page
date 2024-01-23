@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting Page</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      .header {
+        text-align: center;
+        padding: 20px;
+        background-color: #3498db;
+        color: #fff;
+      }
+
+      .content {
+        display: flex;
+        justify-content: space-around;
+        padding: 40px;
+      }
+
+      .box1 {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #2ecc71; /* Change to your desired color */
+        color: #fff;
+        text-align: center;
+        line-height: 150px;
+        font-size: 18px;
+        margin: 0 10px;
+        border-radius: 10%;
+      }
+      .box2 {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #2ecc71; /* Change to your desired color */
+        color: #fff;
+        text-align: center;
+        line-height: 150px;
+        font-size: 18px;
+        margin: 0 10px;
+        border-radius: 10%;
+      }
+
+      .twitter {
+        width: 100%;
+        border-radius: 10%;
+      }
+
+      .project {
+        width: 100%;
+        border-radius: 10%;
+      }
+
+      .text_below_img {
+        color: black;
+        text-decoration: none;
+      }
+
+      .outer_div {
+        width: 250px;
+        /* height: 140px; */
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div>
+        This project highlights a full-stack project with the backend deployed
+        on a free server, which might cause a slight delay. Feel free to watch
+        the video description for a brief overview while waiting for
+        <b>30 seconds</b>.
+      </div>
+    </div>
+    <div class="content">
+      <div class="outer_div">
+        <a
+          class="box"
+          href="https://x.com/tanejarohan6/status/1702047535232336083?s=20"
+          target="_blank"
+        >
+          <img class="twitter" src="img1.jpg" />
+        </a>
+        <!-- <div class="text_below_img">video link</div> -->
+      </div>
+
+      <div class="outer_div">
+        <a
+          class="box"
+          href="https://x.com/tanejarohan6/status/1702047535232336083?s=20"
+          target="_blank"
+        >
+          <img class="project" src="img2.jpg" />
+        </a>
+      </div>
+    </div>
+
+    <script>
+      const t_img = document.querySelector(".twitter");
+      const p_img = document.querySelector(".project");
+
+      const t = document.createElement("H3");
+      t.textContent = "Video Link";
+      t_img.after(t);
+      t.classList.add("text_below_img");
+
+      const t2 = document.createElement("H3");
+      t2.textContent = "Project";
+      p_img.after(t2);
+      t2.classList.add("text_below_img");
+    </script>
+  </body>
+</html>
